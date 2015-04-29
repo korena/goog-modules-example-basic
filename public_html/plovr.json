@@ -1,0 +1,39 @@
+{
+    "id": "modules-example",
+    "paths": ["."],
+    "output-wrapper": "(function(){%output%})();",
+    "mode": "ADVANCED",
+    "level": "VERBOSE",
+    "define": {
+        "goog.LOCALE": "en_GB"
+    }
+    ,
+    "modules": {
+        "main": {
+            "inputs": "main/init.js",
+            "deps": []
+        },
+        "moduleC": {
+            "inputs": "moduleC/modC.js",
+            "deps": "main"
+        },
+        "moduleD": {
+            "inputs": "moduleD/modD.js",
+            "deps": ["main","moduleC"]
+        }
+    },
+    "module-output-path": "modules/module_%s.js",
+    "module-production-uri": "modules/module_%s.js"
+    ,
+    "checks": {
+        "checkRegExp": "WARNING",
+        "checkTypes": "WARNING",
+        "checkVars": "WARNING",
+        "deprecated": "WARNING",
+        "fileoverviewTags": "WARNING",
+        "invalidCasts": "WARNING",
+        "missingProperties": "WARNING",
+        "nonStandardJsDocs": "WARNING",
+        "undefinedVars": "WARNING"
+    }
+}

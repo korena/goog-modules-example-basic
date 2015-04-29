@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>closure modules</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <p>NOTE: Chrome will bitch about cross origin stuff when trying to load modules C and D, because plovr is involved. Run this in firefox, or find a solution for chrome.</p>
+            <h1>About</h1>
+            <p>This project is a single page web application demonstrating the use of google closure modules with and without plovr.</p>
+        </div>
+        <fieldset>
+            <legend>module loading controls</legend>
+            <input id="loadA" type="button" value="Load module A"/> <span>(Without plovr, No dependencies)</span><br>
+            <input id="loadB" type="button" value="Load module B"/> <span>(Without plovr, Depends on module A)</span><br>
+            <input id="loadC" type="button" value="Load module C"/> <span>(With plovr, No dependencies)</span><br>
+            <input id="loadD" type="button" value="Load module D"/> <span>(With plovr, Depends on module C)</span><br>
+        </fieldset>
+        <fieldset>
+            <legend>Results</legend>
+            <div id="modA-results"></div><br>
+            <div id="modB-results"></div><br>
+            <div id="modC-results"></div><br>
+            <div id="modD-results"></div><br>
+        </fieldset>
+        <script type="text/javascript" src="http://localhost:9810/compile?id=modules-example&mode=RAW"></script>
+    </body>
+</html>
