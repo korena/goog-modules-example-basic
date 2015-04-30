@@ -4,4 +4,10 @@ single page web applicaiton, this was meant for a specific developer to checkout
 made public in the hope that it will help someone get over the basics.
 
 
-plovr is provided with the thingy, and needs to be run before this thing can be used.
+plovr is provided with the thingy, and needs to be run before this example can be used.
+
+_________________________________________
+NOTES:
+- This will not teach you anything about basic use of plovr, you're expected to know, but here's a hint: 
+  java -jar build/plover.jar serve plovr.json
+- plovr is used even when not needed for module loading (A & B), because no one should use closure compiler manually unless he has a good reason to do so, which is probably never. I know we're not compiling here, but it's the next thing you're expected to do.
